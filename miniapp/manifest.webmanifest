@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "Мета — По ту сторону Фрейда",
+  "short_name": "Мета",
+  "description": "Книга Андрея М: чтение по главам, поиск, закладки и заметки.",
+  "lang": "ru",
+  "start_url": "./#/book",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#0917a8",
+  "icons": [
+    { "src": "assets/reader-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
