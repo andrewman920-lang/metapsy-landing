@@ -13,3 +13,20 @@ footer .brand-lockup{width:150px}
 .wordmark{padding:0 28px 0 60px;flex:0 0 300px}
 .wordmark img{width:240px;height:auto}
 @media(max-width:680px){.header .brand-lockup{width:148px}footer .brand-lockup{width:132px}}
+
+/* The complete author text remains available with or without JavaScript. */
+.project-reading{border-top:1px solid var(--line)}
+.project-reading summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 30px;list-style:none;cursor:pointer;font-size:15px;font-weight:600;color:var(--accent)}
+.project-reading summary::-webkit-details-marker{display:none}
+.project-reading summary:focus-visible{outline:3px solid var(--accent);outline-offset:-5px}
+.project-reading summary:hover{background:var(--field)}
+.read-symbol{font-size:25px;font-weight:400;line-height:1}
+.read-close,.project-reading[open] .read-open{display:none}
+.project-reading[open] .read-close{display:inline}
+.project-reading[open] .read-symbol{transform:rotate(45deg)}
+.project-article{max-width:760px;margin-inline:auto;padding:28px 40px 56px;font-size:17px;line-height:1.85;overflow-wrap:break-word}
+.project-article h3{font-size:clamp(30px,4vw,42px);margin-bottom:32px}
+.project-article p{margin-bottom:24px;color:var(--muted)}
+.project-article p:last-child{margin-bottom:0}
+.project-article strong{font-weight:600;color:var(--ink)}
+@media(max-width:680px){.project-reading summary{padding:22px 24px}.project-article{padding:16px 24px 36px;font-size:16px}.demo-copy{min-height:0}}
