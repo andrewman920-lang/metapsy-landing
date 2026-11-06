@@ -30,3 +30,12 @@ footer .brand-lockup{width:150px}
 .project-article p:last-child{margin-bottom:0}
 .project-article strong{font-weight:600;color:var(--ink)}
 @media(max-width:680px){.project-reading summary{padding:22px 24px}.project-article{padding:16px 24px 36px;font-size:16px}.demo-copy{min-height:0}}
+
+/* Full-viewport introduction with the text-free glass artwork. */
+.hero{max-width:none;margin:0;border-radius:0;min-height:max(650px,calc(100svh - 100px))}
+.hero-copy{max-width:1440px;margin-inline:auto;padding-top:clamp(56px,8vh,120px)}
+.hero-art{object-position:center;opacity:1}
+.hero-shade{background:linear-gradient(90deg,rgba(2,9,31,.35),rgba(5,20,70,.06) 55%,transparent 75%)}
+.hero-foot{left:max(64px,calc((100vw - 1312px)/2));right:max(48px,calc((100vw - 1344px)/2))}
+@media(max-width:1000px){.hero-foot{left:40px;right:40px}.hero-art{object-position:60% center}}
+@media(max-width:680px){.hero{margin:0;border-radius:0;min-height:max(670px,calc(100svh - 78px))}.hero-copy{padding:38px 24px 110px}.hero-art{object-position:72% center;opacity:1}.hero-shade{background:linear-gradient(90deg,rgba(2,9,31,.65),rgba(2,9,31,.3)),linear-gradient(0deg,rgba(2,9,31,.5),transparent 40%)}.hero-foot{left:24px;right:24px}}
