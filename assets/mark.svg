@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<defs><linearGradient id="body" x2="1" y2="1"><stop stop-color="#064bff"/><stop offset="1" stop-color="#0024cb"/></linearGradient><linearGradient id="fold" x2=".8" y2="1"><stop stop-color="#0347ff"/><stop offset="1" stop-color="#1870ff"/></linearGradient></defs>
-<path fill="url(#body)" d="M4 57V14C4 3 14 5 32 21 50 5 60 3 60 14v43q0 3-3 3H44q-3 0-3-3V47c0-10-3-16-9-20-6 4-9 10-9 20v10q0 3-3 3H7q-3 0-3-3Z"/>
-<path fill="url(#fold)" d="M4 14C4 3 14 5 32 21l-3 6C18 21 4 21 4 14Z"/>
-<path fill="url(#fold)" d="M60 14C60 3 50 5 32 21L22 34C35 22 60 23 60 14Z"/>
-</svg>
