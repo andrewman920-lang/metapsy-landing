@@ -10,10 +10,55 @@
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./assets/reader-icon.png" />
-    <script type="module" crossorigin src="./assets/index-92TdEouN.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CVlIa65v.css">
+    <!-- Available on the first HTML paint, before any font, image or app bundle. -->
+    <style id="boot-critical">html[data-boot]{background:#0917a8}html[data-boot=loading],html[data-boot=error]{overflow:hidden}html[data-boot] #app,html[data-boot] #reader{visibility:hidden}#boot-screen{display:none}html[data-boot] #boot-screen{display:flex}#boot-screen{z-index:10000;box-sizing:border-box;color:#f3f7ff;padding:max(32px,env(safe-area-inset-top)) 24px max(32px,env(safe-area-inset-bottom));background:#0917a8;flex-direction:column;justify-content:center;align-items:center;font:14px/1.5 Arial,sans-serif;position:fixed;inset:0;overflow:hidden}.boot-ambient{pointer-events:none;background:radial-gradient(at 50% 48%,#2354dc70,#0000 58%);position:absolute;inset:0}.boot-wordmark{top:max(40px,calc(env(safe-area-inset-top) + 24px));fill:currentColor;width:108px;height:16px;position:absolute}.boot-optic{aspect-ratio:1;width:min(66vw,330px);margin-top:-16px;position:relative}.boot-optic svg{width:100%;height:100%;position:absolute;inset:0;overflow:visible}.boot-lens{transform-origin:50%;animation:3.6s cubic-bezier(.45,0,.35,1) infinite alternate optical-focus}.boot-lens-rear{animation-name:optical-focus-rear}.boot-caustic{background:radial-gradient(#d9f4ff55,#0000 68%);border-radius:50%;width:62%;height:15%;animation:3.6s ease-in-out infinite alternate optical-light;position:absolute;bottom:0;left:19%;transform:scaleY(.5)}.boot-caption{text-align:center;letter-spacing:-.025em;margin:20px 0 0;font-size:clamp(16px,2vw,19px);font-weight:400;position:relative}.boot-status{color:#c4d5ff;text-align:center;margin:12px 0 0;font-size:12px;position:relative}.boot-signal{background:#e5f2ff26;width:80px;height:1px;margin:26px 0 0;position:relative;overflow:hidden}.boot-signal:after{content:"";background:linear-gradient(90deg,#0000,#effaff,#0000);animation:2s ease-in-out infinite optical-signal;position:absolute;inset:0}.boot-recovery{text-align:center;margin-top:25px;display:none;position:relative}.boot-recovery button,.boot-recovery a{color:inherit;font:inherit;cursor:pointer;background:0 0;border:1px solid #abcaff88;border-radius:8px;margin:4px;padding:12px 18px;text-decoration:none;display:inline-block}.boot-recovery button:focus-visible,.boot-recovery a:focus-visible{outline-offset:4px;outline:2px solid #fff}html[data-boot=error] .boot-recovery{display:block}html[data-boot=error] .boot-signal{display:none}@keyframes optical-focus{0%{transform:translate(18px)rotate(-23deg)scaleX(.86)}to{transform:translate(-4px)rotate(14deg)scaleX(1)}}@keyframes optical-focus-rear{0%{transform:translate(-18px)rotate(23deg)scaleX(.86)}to{transform:translate(4px)rotate(-14deg)scaleX(1)}}@keyframes optical-light{0%{opacity:.4;transform:scale(.8,.4)}to{opacity:1;transform:scale(1.2,.5)}}@keyframes optical-signal{0%{transform:translate(-100%)}to{transform:translate(100%)}}@media (prefers-reduced-motion:reduce){#boot-screen *{animation:none!important}}</style>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        root.dataset.boot = 'loading';
+        const release = () => {
+          clearTimeout(window.__metaBoot.timer);
+          delete root.dataset.boot;
+          document.querySelectorAll('[data-boot-inert]').forEach(el => { el.inert = false; el.removeAttribute('data-boot-inert'); });
+          document.getElementById('boot-screen')?.remove();
+        };
+        window.__metaBoot = { release, timer: setTimeout(() => {
+          if (document.getElementById('app')?.childElementCount) { release(); return; }
+          root.dataset.boot = 'error';
+          const status = document.getElementById('boot-status');
+          if (status) status.textContent = 'Не удалось открыть страницу. Проверьте соединение.';
+        }, 14000) };
+        window.addEventListener('pageshow', event => { if (event.persisted) release(); });
+        // The module may still be stalled before DOMContentLoaded when recovery appears.
+        document.addEventListener('click', event => {
+          if (event.target instanceof Element && event.target.closest('#boot-retry')) location.reload();
+        });
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-uE6mVPz1.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CtxdzbsM.css">
   </head>
   <body>
+    <div id="boot-screen" aria-label="Загрузка Мета">
+      <div class="boot-ambient"></div>
+      <svg class="boot-wordmark" viewBox="0 0 334 48" aria-label="Мета" role="img"><path d="M0 48V0h22l25 22L72 0h22v48H73V22L47 45 21 22v26ZM103 0h71v13h-50v5h46v12h-46v5h50v13h-71ZM181 0h76v14h-27v34h-22V14h-27ZM263 48l30-48h22l30 48h-24l-17-30-18 30ZM284 30h40v8h-40Z" transform="scale(.968 1)"/></svg>
+      <div class="boot-optic" aria-hidden="true">
+        <div class="boot-caustic"></div>
+        <svg viewBox="0 0 330 330" fill="none">
+          <defs>
+            <linearGradient id="boot-glass" x1="70" y1="60" x2="264" y2="270" gradientUnits="userSpaceOnUse"><stop stop-color="#effaff" stop-opacity=".65"/><stop offset=".14" stop-color="#a6d7ff" stop-opacity=".15"/><stop offset=".48" stop-color="#387fff" stop-opacity=".04"/><stop offset=".76" stop-color="#cceaff" stop-opacity=".2"/><stop offset="1" stop-color="#effaff" stop-opacity=".7"/></linearGradient>
+            <linearGradient id="boot-edge" x1="84" y1="58" x2="250" y2="278" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".33" stop-color="#9accff" stop-opacity=".2"/><stop offset=".68" stop-color="#b8ddff" stop-opacity=".4"/><stop offset="1" stop-color="#fff"/></linearGradient>
+            <radialGradient id="boot-core"><stop stop-color="#c5e6ff" stop-opacity=".22"/><stop offset="1" stop-color="#83b6ff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <g class="boot-lens boot-lens-rear"><ellipse cx="165" cy="158" rx="87" ry="123" fill="url(#boot-glass)" stroke="url(#boot-edge)" stroke-width="1.2"/><ellipse cx="169" cy="158" rx="83" ry="122" stroke="#b5d9ff" stroke-opacity=".35"/><path d="M112 61c-30 24-43 64-43 96" stroke="#fff" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/></g>
+          <g class="boot-lens"><ellipse cx="165" cy="158" rx="87" ry="123" fill="url(#boot-glass)" stroke="url(#boot-edge)" stroke-width="1.2"/><ellipse cx="161" cy="158" rx="83" ry="122" stroke="#e4f5ff" stroke-opacity=".35"/><ellipse cx="165" cy="158" rx="80" ry="113" fill="url(#boot-core)"/><path d="M219 252c30-26 38-59 38-92" stroke="#fff" stroke-opacity=".85" stroke-width="1.6" stroke-linecap="round"/></g>
+        </svg>
+      </div>
+      <p class="boot-caption">Линзы для восприятия реальности</p>
+      <p class="boot-status" id="boot-status" role="status">Настраиваем фокус</p>
+      <div class="boot-signal" aria-hidden="true"></div>
+      <div class="boot-recovery"><button id="boot-retry" type="button">Попробовать ещё раз</button><a href="https://vk.ru/club242965515">Сообщество Мета</a></div>
+    </div>
     <div id="app"></div>
     <noscript><main style="padding:32px;font:18px/1.6 sans-serif"><h1>Мета | Метапсихоанализ</h1><p>Образовательный проект Андрея Манаенко о желании, бессознательном и человеческих связях.</p><p>Для интерактивной страницы включите JavaScript или <a href="https://vk.ru/club242965515">перейдите в сообщество VK</a>.</p></main></noscript>
   </body>
