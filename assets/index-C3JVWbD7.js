@@ -189,7 +189,7 @@ void main() {
       <div class="hero-inner wrap">
         <div class="hero-copy">
           <p class="intro-label">${hu}<span>Линзы для восприятия реальности</span></p>
-          <h1 id="hero-title" aria-label="Понять себя — значит увидеть связи"><span class="hero-line"><span class="hero-equation" data-intro-line><span>Понять себя.</span><span class="equation-sign" aria-hidden="true">=</span></span></span><span class="hero-line"><span data-intro-line>Увидеть связи</span></span></h1>
+          <h1 id="hero-title" aria-label="Понять себя — значит увидеть связи"><span class="hero-line"><span class="hero-equation" data-intro-line><span>Понять себя</span><span class="equation-sign" aria-hidden="true">=</span></span></span><span class="hero-line"><span data-intro-line>Увидеть связи</span></span></h1>
           <p class="hero-lead">Наш внутренний мир складывается в отношениях с другими. А из человеческих желаний вырастают идеи, правила и целые культуры.</p>
           <p class="hero-positioning">«Мета» — психоанализ как оптика для исследования этих связей.</p>
           <div class="hero-actions">
